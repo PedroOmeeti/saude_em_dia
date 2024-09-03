@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:saude_em_dia/components/fab.dart';
 import 'package:saude_em_dia/view/body_view.dart';
+import 'package:saude_em_dia/view/dicas_saude_view.dart';
 import 'package:saude_em_dia/view/monitoramento_view.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _pages = [
     BodyView(),
     MonitoramentoView(),
-    Center(child: Text('Dicas de Saúde')),
+    DicasSaudeView(),
     Center(child: Text('Perfil')),
   ];
 
@@ -78,6 +79,7 @@ class _MyAppState extends State<MyApp> {
            currentIndex: _selectedIndex,
            selectedItemColor: Color.fromARGB(255, 10, 131, 105),
            onTap: _onItemTapped,
+           unselectedLabelStyle: TextStyle(color: Color.fromARGB(255, 42, 44, 44)),
            unselectedItemColor: Color.fromARGB(255, 42, 44, 44),
             
         ),
